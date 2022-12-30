@@ -167,7 +167,7 @@ reset_config() {
         return 0
     fi
     /usr/local/x-ui/x-ui setting -reset
-    echo -e "所有面板设置已重置为默认值，现在请重启面板，并使用默认的 ${green}54321${plain} 端口访问面板"
+    echo -e "所有面板设置已重置为默认值，现在请重启面板，并使用默认的 ${green}443${plain} 端口访问面板"
     confirm_restart
 }
 
@@ -181,7 +181,7 @@ check_config() {
 }
 
 set_port() {
-    echo && echo -n -e "输入端口号[1-65535]: " && read port
+    echo && echo -n -e "输入端口号[1-65535]: " &&  port
     if [[ -z "${port}" ]]; then
         LOGD "已取消"
         before_show_menu
